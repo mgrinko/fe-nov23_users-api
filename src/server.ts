@@ -5,9 +5,8 @@ import { Color, User } from './types';
 const PORT = 5000;
 const CLIENT_URL = 'http://localhost:3000';
 const app = express();
-app.use(cors({
-  origin: CLIENT_URL,
-}));
+
+app.use(cors({ origin: '*' }));
 
 const users: User[] = [
   { id: 1, name: 'Valeriy Zaluzhnyi', carColorId: 5 },
