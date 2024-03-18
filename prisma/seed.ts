@@ -17,7 +17,6 @@ const users: User[] = [
   { id: 3, name: 'Pan Roman', carColorId: 2 },
 ];
 
-
 async function main() {
   for (const color of colors) {
     await prisma.color.create({

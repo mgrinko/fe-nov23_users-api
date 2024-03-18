@@ -7,14 +7,6 @@ const app = express();
 
 app.use(cors({ origin: '*' }));
 
-function getColor(colorId: number) {
-  return prisma.color.findUnique({
-    where: {
-      id: colorId,
-    },
-  });
-}
-
 app.get('/users', async (req, res) => {
   const users = await prisma.user.findMany({
     include: {
